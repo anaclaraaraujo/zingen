@@ -21,6 +21,37 @@
   }
 }
 
+.music-bars {
+  display: inline-block;
+}
+
+.bar {
+  animation: beat 1s infinite ease-in-out;
+  transform-origin: bottom;
+}
+
+.bar:nth-child(2n) {
+  animation-duration: 0.8s;
+}
+.bar:nth-child(3n) {
+  animation-duration: 0.9s;
+}
+.bar:nth-child(4n) {
+  animation-duration: 0.7s;
+}
+.bar:nth-child(5n) {
+  animation-duration: 1.1s;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
 
 @media (width >= 80em) {
   #hero {
